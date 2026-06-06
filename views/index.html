@@ -1,55 +1,200 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CloudApp</title>
+    <title>CloudApp Diego Astudillo</title>
 
     <style>
-        body{
-            font-family: Arial, sans-serif;
-            background-color: #f4f6f9;
-            text-align: center;
-            padding-top: 60px;
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, Helvetica, sans-serif;
         }
 
-        .contenedor{
-            background: white;
-            width: 60%;
-            margin: auto;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+        body{
+            background:#0f172a;
+            color:white;
+        }
+
+        nav{
+            background:#1e293b;
+            padding:20px;
+            text-align:center;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:0 15px;
+            font-weight:bold;
+        }
+
+        .container{
+            width:90%;
+            max-width:1000px;
+            margin:auto;
+            padding:30px;
+        }
+
+        .card{
+            background:#1e293b;
+            padding:30px;
+            border-radius:15px;
+            margin-top:20px;
+            text-align:center;
         }
 
         h1{
-            color: #0077cc;
+            color:#38bdf8;
+            margin-bottom:20px;
         }
 
-        p{
-            font-size: 18px;
+        img{
+            width:250px;
+            border-radius:15px;
+            margin:20px 0;
+        }
+
+        table{
+            width:100%;
+            margin-top:20px;
+            border-collapse:collapse;
+        }
+
+        table, th, td{
+            border:1px solid white;
+        }
+
+        th{
+            background:#38bdf8;
+            color:black;
+        }
+
+        th, td{
+            padding:10px;
+        }
+
+        form{
+            display:flex;
+            flex-direction:column;
+            gap:10px;
+            margin-top:20px;
+        }
+
+        input, textarea{
+            padding:10px;
+            border:none;
+            border-radius:8px;
+        }
+
+        button{
+            padding:10px;
+            background:#38bdf8;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            font-weight:bold;
+        }
+
+        footer{
+            text-align:center;
+            padding:20px;
+            margin-top:30px;
         }
     </style>
 </head>
+
 <body>
 
-    <div class="contenedor">
-        <h1>Aplicación en la Nube ☁️</h1>
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Tecnologías</a>
+        <a href="#">Contacto</a>
+    </nav>
 
-        <p><strong>Estudiante:</strong> Diego Alejandro Serna</p>
+    <div class="container">
 
-        <p>La aplicación está alojada en la nube correctamente.</p>
+        <div class="card">
+            <h1>☁️ CloudApp Estudiantes</h1>
 
-        <p>Servidor funcionando 24/7 desde internet.</p>
+            <h2>Diego Astudillo</h2>
 
-        <p id="fecha"></p>
+            <p>
+                Aplicación desplegada exitosamente en la nube mediante Render.
+            </p>
+
+            <img src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png" alt="Cloud">
+
+            <p id="fecha"></p>
+        </div>
+
+        <div class="card">
+            <h2>Tecnologías Utilizadas</h2>
+
+            <table>
+                <tr>
+                    <th>Tecnología</th>
+                    <th>Uso</th>
+                </tr>
+
+                <tr>
+                    <td>HTML</td>
+                    <td>Estructura de la página</td>
+                </tr>
+
+                <tr>
+                    <td>CSS</td>
+                    <td>Diseño visual</td>
+                </tr>
+
+                <tr>
+                    <td>Node.js</td>
+                    <td>Servidor Backend</td>
+                </tr>
+
+                <tr>
+                    <td>Express</td>
+                    <td>Servidor Web</td>
+                </tr>
+
+                <tr>
+                    <td>Render</td>
+                    <td>Despliegue en la nube</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>Formulario de Contacto</h2>
+
+            <form>
+                <input type="text" placeholder="Nombre">
+
+                <input type="email" placeholder="Correo">
+
+                <textarea rows="4" placeholder="Mensaje"></textarea>
+
+                <button type="submit">
+                    Enviar
+                </button>
+            </form>
+        </div>
+
     </div>
+
+    <footer>
+        CloudApp 2026 - Desarrollado por Diego Astudillo
+    </footer>
 
     <script>
         const fecha = new Date();
 
         document.getElementById("fecha").innerHTML =
-            "Fecha y hora: " + fecha;
+        "Fecha y hora del servidor: " +
+        fecha.toLocaleString();
     </script>
 
 </body>
